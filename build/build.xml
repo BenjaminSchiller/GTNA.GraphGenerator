@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="all" name="all">
+    <target name="all" depends="graphGenerators"/>
+
+    <target name="graphGenerators">
+        <jar destfile="graphGenerators.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="gtna.graphGenerators.GraphGenerators"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="../java/bin"/>
+            <fileset dir="../../GTNA/bin"/>
+            <fileset dir="../../GTNA/config"/>
+            <fileset dir="../../../ArgList/bin"/>
+        </jar>
+    </target>
+</project>
